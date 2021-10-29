@@ -33,3 +33,29 @@ body {
     margin-left: 10px;
 
 }
+
+.side-icons {
+    display: inline-flex;
+    margin-right: 20px;
+
+
+}
+
+.user-icon {
+    display: inline-flex;
+    position: relative;
+    margin: 12px 16px;
+}
+
+.shopping-bag {
+    display: inline-flex;
+    position: relative;
+    margin: 12px 16px;
+}
+
+.search-icon {
+    display: inline-flex;
+    position: relative;
+    margin: 12px 16px;
+
+}
