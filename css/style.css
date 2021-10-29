@@ -20,9 +20,16 @@ body {
 
 .logo {
     display: inline-flex;
-    position:relative;
+    position: relative;
     align-items: center;
     margin-top: 15px;
     justify-content: center;
+
+}
+
+.menu {
+    display: inline-flex;
+    position: absolute;
+    margin-left: 10px;
 
 }
