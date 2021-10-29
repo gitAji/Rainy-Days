@@ -9,3 +9,20 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.navbar {
+    display: flex;
+    position: relative;
+    align-items: center;
+    background-color: rgb(240, 238, 238);
+
+}
+
+.logo {
+    display: inline-flex;
+    position:relative;
+    align-items: center;
+    margin-top: 15px;
+    justify-content: center;
+
+}
