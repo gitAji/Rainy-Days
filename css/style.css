@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-/* Style for the body */
+/* Style the body */
 body {
 
     font-family: 'Avenir''Montserrat';
@@ -13,17 +13,19 @@ body {
 .navbar {
     display: flex;
     position: relative;
+    justify-content: space-between;
     align-items: center;
     background-color: rgb(240, 238, 238);
 
 }
 
 .logo {
-    display: inline-flex;
+    display: inline-block;
+    padding: 0;
     position: relative;
-    align-items: center;
-    margin-top: 15px;
-    justify-content: center;
+    left: 50%;
+    margin-right: auto;
+
 
 }
 
@@ -44,25 +46,47 @@ body {
 .user-icon {
     display: inline-flex;
     position: relative;
-    margin: 12px 16px;
+    margin: 12px 14px;
 }
 
 .shopping-bag {
     display: inline-flex;
     position: relative;
-    margin: 12px 16px;
+    margin: 12px 14px;
 }
 
 .search-icon {
     display: inline-flex;
     position: relative;
-    margin: 12px 16px;
+    margin: 12px 14px;
 
 }
 
 .slides {
     position: relative;
+    display: block;
+}
 
+.secondary-btn {
+    border: 1px solid;
+    border-color: #1EB374;
+    color: #1EB374;
+    background-color: rgb(255, 255, 255);
+    padding: 15px 45px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 20px;
+    display: inline-block;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: bold;
+    font-variant: small-caps;
+    cursor: pointer;
+}
+
+.secondary-btn:hover {
+    background-color: #1EB374;
+    color: white;
 }
 
 .dot {
@@ -89,4 +113,12 @@ body {
 
 .fas:hover {
     color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
 }
