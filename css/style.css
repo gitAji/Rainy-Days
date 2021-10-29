@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Style for the body */
+body {
+
+    font-family: 'Avenir''Montserrat';
+    margin: 0;
+    padding: 0;
+}
