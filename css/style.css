@@ -8,6 +8,7 @@ body {
     font-family: 'Avenir''Montserrat';
     margin: 0;
     padding: 0;
+    overflow-x:hidden;
 }
 
 .navbar {
@@ -62,6 +63,7 @@ body {
 .slides {
     position: relative;
     display: block;
+    margin: 1px;
 }
 
 .secondary-btn {
