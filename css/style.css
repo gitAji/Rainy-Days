@@ -20,11 +20,8 @@ body {
 }
 
 .logo {
-    display: inline-block;
-    padding: 0;
     position: relative;
-    left: 50%;
-    margin-right: auto;
+    left:50%;
 
 
 }
