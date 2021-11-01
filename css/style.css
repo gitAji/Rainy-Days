@@ -179,10 +179,11 @@ ul {
    overflow: hidden;
    align-items: center;
     
-  
-
 }
-
+.grid-btn{
+    align-items: center;
+    
+}
 
 /* others */
 .active,
