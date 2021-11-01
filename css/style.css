@@ -153,7 +153,6 @@ ul {
     grid-template-columns: 50% 50%;
     grid-gap: 20px 20px;
     padding: 12px 12px;
-    border: 1px solid;
     margin: 30px 0 50px 0;
     background-color: #fd8244c2;
 
@@ -162,27 +161,47 @@ ul {
 .grid-men {
     margin: 5px;
     padding: 2px 2px;
-    border: 1px solid;
+    border: 1px solid whitesmoke;
     align-items: center;
+    background-color: rgb(250, 212, 185);
 
 }
 
 .grid-woman {
     margin: 5px;
     padding: 2px 2px;
-    border: 1px solid;
+    border: 1px solid whitesmoke;
     align-items: center;
+    background-color: rgb(250, 212, 185);
 }
 
 .grid-img {
-   margin:auto;
-   overflow: hidden;
-   align-items: center;
-    
-}
-.grid-btn{
+    margin: auto;
+    overflow: hidden;
     align-items: center;
-    margin:auto;
+    background-size: cover;
+
+
+}
+
+.grid-btn {
+    align-items: center;
+    margin: auto;
+}
+
+/* partners & brands */
+.brand-flex {
+    display: flex;
+    padding: 20px 20px;
+    background-color: rgb(88, 88, 88);
+    height: 100px;
+    margin-bottom: 50px;
+}
+
+.brand-flex>* {
+    display: inline-flex;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* others */
@@ -219,16 +238,6 @@ footer {
     float: left;
 
 }
-
-/* .footer-p {
-    margin: 5px 30px;
-    padding: 25px 20px;
-    float: right;
-    text-align: justify;
-    letter-spacing: 1px;
-
-
-} */
 
 .footer-col {
     width: 25%;
@@ -348,13 +357,7 @@ footer {
     width: 100%;
 }
 
-@media only screen and (max-width: 768px) {
 
-    /* For mobile phones: */
-    [class*="col-"] {
-        width: 100%;
-    }
-}
 
 
 /*responsive*/
