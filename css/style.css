@@ -177,6 +177,7 @@ ul {
 .grid-img {
    margin:auto;
    overflow: hidden;
+   align-items: center;
     
   
 
