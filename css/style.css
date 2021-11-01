@@ -388,5 +388,7 @@ footer {
     .grid-container {
         grid-template-columns: 100%;
     }
-
+    .brand-flex>img {
+        width: 20%;
+    }
 }
