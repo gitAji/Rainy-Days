@@ -24,7 +24,7 @@ p {
     font-size: 16px;
     letter-spacing: 4px;
     text-align: justify;
-    margin:12px;
+    margin: 12px;
 
 }
 
@@ -60,10 +60,12 @@ ul {
     margin-left: 10px;
 
 }
+
 .side-icons {
     display: inline-flex;
     margin-right: 20px;
 }
+
 .user-icon {
     display: inline-flex;
     position: relative;
@@ -146,44 +148,48 @@ ul {
 }
 
 /* main CTA section */
-.grid-container{
-display:grid;
-grid-template-columns:50% 50%;
-grid-gap: 20px 20px;
-padding: 12px 12px;
-border: 1px solid;
-margin: 30px 0 50px 0;
-background-color: #fd8244c2;
+.grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 20px 20px;
+    padding: 12px 12px;
+    border: 1px solid;
+    margin: 30px 0 50px 0;
+    background-color: #fd8244c2;
 
 }
-.grid-men{
+
+.grid-men {
     margin: 5px;
     padding: 2px 2px;
     border: 1px solid;
-    object-fit:cover;
-  
+    align-items: center;
 
 }
-.grid-woman{
+
+.grid-woman {
     margin: 5px;
     padding: 2px 2px;
     border: 1px solid;
-    
+    align-items: center;
 }
-.grid-img{
-    object-fit:cover;
-    height:50%;
-    width: 50%;
-    margin: 0;
-    padding: 0;
+
+.grid-img {
+    height: 80%;
+    width: 70%;
+    margin: auto;
+    padding: 30px 30px;
 
 }
+
+
 /* others */
 .active,
 .dot:hover {
     background-color: #fb7202;
 
 }
+
 .fas {
     color: rgb(245, 139, 1);
     cursor: pointer;
@@ -195,8 +201,8 @@ background-color: #fd8244c2;
 
 /* footer section  */
 footer {
-    display:flex;
-    position:absolute;
+    display: flex;
+    position: absolute;
     color: #f0f9ff;
     background-color: #FF6111;
     width: 100%;
@@ -285,6 +291,7 @@ footer {
 
 
 }
+
 /* footer end */
 
 
@@ -372,8 +379,9 @@ footer {
     footer {
         height: 250%
     }
-    .grid-container{
-        grid-template-columns:100%;
+
+    .grid-container {
+        grid-template-columns: 100%;
     }
 
 }
