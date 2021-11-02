@@ -16,7 +16,7 @@ body {
 
 hr {
     border: dotted 1px rgb(114, 114, 114);
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 p {
@@ -24,7 +24,7 @@ p {
     font-size: 16px;
     letter-spacing: 4px;
     text-align: justify;
-    margin: 12px;
+    margin: 15px 15px;
 
 }
 
@@ -103,7 +103,6 @@ ul {
     text-align: center;
     text-decoration: none;
     margin: 4px 20px;
-    display: inline-block;
     font-family: 'Montserrat';
     font-size: 26px;
     font-weight: bold;
@@ -179,7 +178,8 @@ ul {
     margin: auto;
     overflow: hidden;
     align-items: center;
-    background-size: cover;
+    background-size:contain;
+    background-position: center;
 
 
 }
@@ -193,7 +193,7 @@ ul {
 .brand-flex {
     display: flex;
     padding: 20px 20px;
-    background-color: rgb(88, 88, 88);
+    background-color: rgb(161, 161, 161);
     height: 100px;
     margin-bottom: 50px;
 }
@@ -297,8 +297,10 @@ footer {
 }
 
 .footer-bottom {
-    padding: 0px;
+    padding: 1px 30px;
     background-color: #000000;
+    display: inline-flex;
+    position: relative;
 
 
 }
