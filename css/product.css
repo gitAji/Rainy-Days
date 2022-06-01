@@ -1,0 +1,154 @@
+/* style for products - product pages and category pages */
+/* This containeris used in few pages */
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px 12px;
+    align-content: space-between;
+    justify-content: space-between;
+
+}
+
+/* style for category */
+.category {
+    width: 33%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.cat-img {
+    width: 100%;
+    overflow: hidden;
+    margin-block: 20px;
+
+}
+
+.cat-img>img {
+    height: 480px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.cat-img>img:hover {
+    transform: scale(1.1);
+}
+
+/* style for product note: this style maybe repeating  */
+.product {
+    flex-direction: column;
+    width: 24%;
+}
+
+.product-img {
+    position: relative;
+    overflow: hidden;
+    margin: 10px auto;
+}
+
+.product-img>img {
+    position: relative;
+    height: 390px;
+    min-width: 100%;
+    object-fit: cover;
+}
+
+.product-img>img:hover {
+    transform: scale(1.1);
+}
+
+.product-description {
+    display: block;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.container-guest {
+    padding: 12px 12px;
+    margin: 12px 12px;
+    border: 1px solid var(--clr-dark-bgcolor);
+}
+
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 15px 15px;
+}
+
+.load-more {
+    padding: 30px 500px;
+    align-items: center;
+    margin: 10px auto;
+}
+
+/* style for product-view page */
+.left-col {
+    width: 50%;
+}
+
+.right-col {
+    width: 50%;
+}
+
+.left-col img {
+    width: 60%;
+    height: 90%;
+    margin: 40px 40px;
+    object-fit: cover;
+}
+
+.product-description {
+    margin-bottom: 20px;
+}
+
+/* style for checkout success */
+.checkout-success {
+    margin: 40px auto;
+    padding: 70px 20px;
+    align-items: center;
+    background-color: var(--clr-light-bgcolor);
+}
+
+/* media queries for product and checkout section are placed here*/
+@media(max-width: 564px) {
+    .cat-img>img {
+        height: auto;
+    }
+
+    .category {
+        flex-direction: column;
+        width: 500%;
+    }
+
+    .product {
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .product-img>img {
+        width: 80%;
+        height: 70%;
+    }
+
+    .left-col {
+        width: 100%;
+    }
+
+    .right-col {
+        width: 100%;
+    }
+
+    .left-col img {
+        width: 100%;
+        height: 100%;
+        margin: 10px 10px;
+
+    }
+
+}

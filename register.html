@@ -3,17 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="online shop">
-    <meta name="keywords" content="online shop,jackets for adventure,Rainydays ">
+    <meta name="description" content="User Registration">
+    <meta name="keywords" content="register,user registration,Rainydays ">
     <meta name="author" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat'>
-    <link href='//fonts.googleapis.com/css?family=Avenir'>
+    <link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800'>
+    <link href='//fonts.googleapis.com/css?family=Avenir:thin,extra-light,light,100,200,300,400,500,600,700,800'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
-    <title>Home-The Rainy Days</title>
+    <title>Registration Form - The Rainy Days</title>
 </head>
 
 <body>
@@ -40,69 +40,54 @@
         <!-- top bar icons -->
         <div class="side-icons">
             <div class="user-icon">
-                <a href="login.html"><i class="fas fa-user fa-1x" title="user login or register icon"></i></a>
+                <a href="login.html"><i class="fas fa-user fa-1x"></i></a>
             </div>
             <div class="shopping-bag">
-                <a href="bag.html"> <i class="fas fa-shopping-bag fa-1x" title="your shopping bag"></i></a>
+                <a href="bag.html"> <i class="fas fa-shopping-bag fa-1x"></i></a>
             </div>
             <div class="search-icon">
-                <a href="search.html"> <i class="fas fa-search fa-1x" title="here you can search"></i></a>
+                <a href="search.html"> <i class="fas fa-search fa-1x"></i></a>
             </div>
         </div>
     </div>
-    <!-- end of navbar -->
+    <!-- end of top bar icons -->
+    <!-- breadcrumb -->
+    <div class="breadcrumb">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i></li></a>
+            <li class="b-active">User Registration</li>
+        </ul>
+    </div>
+    <!-- end of breadcrumb -->
 
-    <!-- start of slider -->
-    <div class="slides">
-        <img src="images/01.jpeg" alt="man on hiking" height="" width="100%">
-        <div class="main-cta">
-            <!-- this is the h1 title of the site -->
-            <h1 class="title">Start Exploring Now!</h1>
-            <p class="white-text">Spending much time on your comfort soon? Shop with us & step outside your comfort!
-            </p>
-            <a href="#middle">
-                <div class="btn primary-btn">Explore</div>
-            </a>
-        </div>
-    </div>
-    <!-- end of slider -->
-    <!-- <button>
-    <div class="primary-btn">Explore</div>
-</button> -->
-    <!-- cta section -->
-    <div class="grid-container" section id="middle">
-        <div class="grid-men">
-            <div class=" grid-img">
-                <img src="images/man.jpeg" alt="a model man">
+    <!-- end of navbar -->
+    <!-- Registration form -->
+    <div class="form">
+        <form action="register.php" method="post">
+            <h1>Registration Form</h1>
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="Address" required>
+            <label for="phonenumber">Phone Number</label>
+            <input type="text" id="phonenumber" name="phonenumber" placeholder="Phone" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" validate="email" placeholder="Email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" validate="password" placeholder="Password"
+                maxlength="10" required>
+            <label for="repassword">Re-password</label>
+            <input type="password" id="repassword" name="repassword" validate="password" placeholder="Re-password"
+                maxlength="10" required>
+            <input type="submit" value="Register Now" name="submit" class="btn primary-btn">
+            <div class="form-base">
+                <p>Already have an account? <a href="login.html">Sign in</a>.</p>
             </div>
-            <div class="grid-btn">
-                <a href="categories.html">
-                    <div class="btn primary-btn">Men</div>
-                </a>
-            </div>
-        </div>
-        <div class="grid-women">
-            <div class="grid-img">
-                <img src="images/woman.jpeg" alt="a model woman">
-            </div>
-            <div class="grid-btn">
-                <a href="categories.html">
-                    <div class="btn primary-btn">Women</div>
-                </a>
-            </div>
-        </div>
     </div>
-    </div>
-    <!-- end of cta section -->
-    <!-- partners and brand section -->
-    <div class="brand-flex">
-        <img src="images/nike.jpeg" alt="nike logo">
-        <img src="images/adidas.jpeg" alt="adidas logo">
-        <img src="images/puma.jpeg" alt="puma logo">
-        <img src="images/converse.jpeg" alt="converse logo">
-        <img src="images/all.jpeg" alt="all">
-    </div>
-    <!-- end of partners and brands -->
+    <!-- End of the form -->
+
     <!-- footer Section -->
     <footer class="footer">
         <div class="footer-container">
@@ -113,8 +98,7 @@
                 labore, quam quae ex fuga natus repellendus magni amet vero itaque, rerum at pariatur autem
                 nobis Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur accusantium
                 doloribus nulla placeat? Necessitatibus at officiis fugiat in aliquid id sunt, consequuntur
-                vitae ipsum, voluptate, quia odit perferendis numquam repellendus magni amet vero itaque consectetur.
-            </p>
+                vitae ipsum, voluptate, quia odit perferendis numquam?</p>
             <hr>
             <div class="footer-col">
                 <h3>Help</h3>
@@ -154,28 +138,14 @@
             </div>
         </div>
         <div class="footer-brand">
-            <div class="grayscale"><img src="images/visa.jpeg" alt="visa" height="35px" width="90px"></div>
-            <div class="grayscale"><img src="images/paypal.png" alt="paypal" height="35px" width="110px"></div>
-            <div class="grayscale"><img src="images/klarna.png" alt="klarna" height="25px" width="100px"></div>
-            <div class="grayscale"><img src="images/posten.png" alt="posten" height="35px" width="105px"></div>
-            <div>
-                <i class="far fa-envelope-open"></i>
-                <label for="email">Join Us!</label>
-                <input type="email" id="email" name="email" placeholder="Email" validate="email" required>
-
-            </div>
-            <div><i class="far fa-comment-alt fa-2x"></i></div>
+            <div class="grayscale"><img src="images/visa.jpeg" alt="visa" height="35px" width="110px"></div>
+            <div class="grayscale"><img src="images/paypal.png" alt="paypal" height="35px" width="120px"></div>
+            <div class="grayscale"><img src="images/klarna.png" alt="klarna" height="25px" width="110px"></div>
+            <div class="grayscale"><img src="images/posten.png" alt="posten" height="35px" width="125px"></div>
         </div>
         <div class="footer-bottom">
-            <p>
-                <a href="https://jigsaw.w3.org/css-validator/check/referer">
-                    <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss"
-                        alt="Valid CSS!" />
-                </a>
-            </p>
             <div class="footer-p">&copy;Copyright 2021 All rights Reserved.</div>
             <div class="footer-backtotop">
-
                 <a href="#top"> <i class="fas fa-caret-square-up fa-2x"></i></a>
             </div>
         </div>

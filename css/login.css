@@ -1,0 +1,76 @@
+/* style for login system */
+
+/* styling the form */
+.form {
+    align-items: center;
+    margin: auto;
+    margin-block: 15px;
+    padding: 5px 25px;
+    width: 45%;
+    background-color: var(--clr-neutral);
+    border: 2px solid var(--clr-light-bgcolor);
+    box-sizing: border-box;
+    border-radius: 10px;
+
+}
+/* style for the bottom of the form */
+.form-base {
+    display: block;
+    margin: 12px 0px;
+    padding: 0 12px;
+    border: 1px solid var(--clr-dark-bgcolor);
+    background-color: var(--clr-light-bgcolor);
+}
+
+input[type=text] {
+    display: inline-block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+input[type=email] {
+    display: inline-block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+input[type=password] {
+    display: inline-block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+textarea {
+    display: inline-block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+label {
+    padding-bottom: 5px;
+    color: var(--clr-dark);
+    font-weight: 500;
+
+}
+
+a {
+    color: var(--clr-primary-blue);
+}
+
+a:hover {
+    color: var(--clr-primary-green);
+}
+
+@media(max-width: 574px) {
+ 

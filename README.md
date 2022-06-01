@@ -1,3 +1,14 @@
-# Rainy-Days
-Ecommerce site link
-https://goofy-cori-1e9e3e.netlify.app/
+# RainyDays
+Project name: The Rainy-Days
+Project-category: E-commerce website
+Owner:#
+Repository: RainyDays
+
+Goal
+------------------
+To put into practice everything you’ve learned about HTML and CSS over this course.
+Brief
+------------------
+You need to deliver a properly functioning, responsive website for the assignment brief that you chose in Design 1.
+
+Site link: <update coming soon>  

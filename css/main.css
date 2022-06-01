@@ -1,0 +1,720 @@
+/*importing other css for the site*/
+@import url(root.css);
+@import url(product.css);
+@import url(login.css);
+@import url(checkout.css);
+
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-size: 1.1rem;
+    margin: 10px 0 0 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+    
+
+h2 {
+    font-family: var(--ff-main-font);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1;
+    font-variant: small-caps;
+    color: var(--clr-primary-blue);
+
+}
+
+h3 {
+    font-family: var(--ff-main-font);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    font-variant: small-caps;
+    color: var(--clr-primary-orange);
+
+}
+
+/* style the paragraph */
+p {
+    font-family: var(--ff-sub-font);
+    font-size: 18px;
+    padding: 5px 5px;
+    letter-spacing: 3px;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+/* style horizontalline */
+hr {
+    border: dotted 1px var(--clr-light);
+    margin: 20px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    position: relative;
+    max-height: 75px;
+    background-color: var(--clr-neutral);
+
+}
+
+/* style the logo */
+.logo {
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.logo img {
+    height: 70px;
+    width: 140px;
+}
+
+.logo a {
+    background-color: transparent;
+}
+
+/* hamburger menu */
+.menu {
+    display: inline-flex;
+    position: absolute;
+    margin: 10px 10px;
+}
+
+/* heading for main CTA */
+.title {
+    color: var(--clr-neutral);
+
+}
+
+/* p text for main cta */
+.white-text {
+    color: var(--clr-neutral);
+    font-family: "Simplifica";
+}
+
+/* checkbox hack this needed to be updated later */
+
+input#hamburger {
+    display: none;
+}
+
+input#hamburger:checked~nav.hamburger {
+    display: block;
+}
+
+nav.hamburger {
+    display: none;
+}
+
+nav.hamburger ul {
+    list-style-type: none;
+    display: block;
+    position: absolute;
+    margin: 75px 0px;
+    padding: 10px 10px;
+    z-index: 2;
+    background-color: var(--clr-overlay-orange);
+    height: 225px;
+    width: 1000px;
+
+}
+
+nav.hamburger li {
+    margin-bottom: 0px;
+
+}
+
+nav.hamburger li a {
+    font-family: var(--ff-main-font);
+    font-size: 24px;
+    text-decoration: none;
+    color: var(--clr-primary-orange);
+    padding: 12px 12px;
+    display: block;
+    text-align: center;
+}
+
+nav.hamburger li a:hover {
+    color: var(--clr-neutral);
+    background: var(--clr-primary-green);
+}
+
+/* Note-:idea is from the teacher */
+
+/* side bar consist of 3 icons */
+.side-icons {
+    display: inline-flex;
+    align-items: center;
+
+}
+
+.user-icon,
+.shopping-bag,
+.search-icon {
+    margin-right: 25px;
+}
+
+.slides {
+    display: flex;
+    position: relative;
+    margin: 10px auto;
+    z-index: 1;
+    /*-1 will not make the btn work */
+}
+
+.main-cta {
+    position: absolute;
+    background-color: var(--clr-overlay-orange);
+    padding: 10px 10px;
+    left: 70%;
+    top: 350px;
+    margin: 12px 20px;
+    overflow: hidden;
+
+}
+
+/* breadcrumb */
+.breadcrumb {
+    padding: 5px 5px;
+    list-style: none;
+    background-color: var(--clr-light-bgcolor);
+}
+
+.breadcrumb li {
+    display: inline;
+}
+
+.breadcrumb li+li:before {
+    padding: 10px 10px;
+    color: var(--clr-primary-blue);
+    content: "|\00a0";
+}
+
+.breadcrumb li a {
+    color: var(--clr-dark);
+    font-size: 20px;
+}
+
+.breadcrumb li a:hover {
+    color: var(--clr-primary-green);
+}
+
+/* active link on the breadcrumb marked in a different color */
+.b-active {
+    color: var(--clr-light);
+}
+
+/* style the buttons */
+/* maintaining the DRY principal here */
+.btn {
+    padding: 15px 20px;
+    border: 1px solid;
+    text-align: center;
+    text-decoration: none;
+    margin: 12px 1px;
+    font-family: var(--ff-main-font);
+    font-size: 24px;
+    font-weight: 600;
+    font-variant: small-caps;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background-color: var(--clr-neutral);
+    border-color: var(--clr-primary-green);
+    color: var(--clr-primary-green);
+}
+
+.primary-btn:hover {
+    background-color: var(--clr-primary-green);
+    color: var(--clr-neutral);
+}
+
+.secondary-btn {
+    border: 1px solid;
+    color: var(--clr-primary-blue);
+    background-color: var(--clr-neutral);
+}
+
+.secondary-btn:hover {
+    background-color: var(--clr-primary-blue);
+    color: var(--clr-neutral);
+}
+
+::placeholder {
+    color: var(--clr-light-bgcolor);
+}
+
+/* main CTA section in the index.html */
+.grid-container {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-auto-rows: 100%;
+    grid-gap: 30px 30px;
+    padding: 12px 12px;
+    background-color: var(--clr-light-bgcolor);
+
+}
+
+.grid-men {
+    grid-column: auto;
+    grid-row: auto;
+    align-items: center;
+    background-color: var(--clr-overlay-orange);
+
+}
+
+.grid-women {
+    grid-column: auto;
+    grid-row: auto;
+    align-items: center;
+    background-color: var(--clr-overlay-orange);
+}
+
+.grid-img {
+
+    align-items: center;
+    background-size: contain;
+    background-position: center;
+}
+
+.grid-img>img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.grid-btn {
+    align-items: center;
+    margin: 1px 0;
+    padding: 1px;
+}
+
+/* partners & brands */
+.brand-flex {
+    display: flex;
+    padding: 20px 20px;
+    background-color: var(--clr-light-bgcolor);
+    margin-block: 50px;
+    cursor: pointer;
+    object-fit: cover;
+
+}
+
+.brand-flex>img {
+    overflow: hidden;
+
+}
+
+/* brands that we do sell */
+.brand-flex>img:hover {
+    color: var(--clr-primary-green);
+    border: 1px solid;
+}
+
+.fas,
+.far {
+    color: var(--clr-primary-orange);
+    cursor: pointer;
+    margin: 0 5px
+}
+
+.fas:hover {
+    color: var(--clr-primary-green);
+}
+
+.search {
+    display: grid;
+    position: relative;
+    height: 500px;
+    margin: 30px 90px;
+}
+
+.search-box {
+    align-items: center;
+}
+
+input[type=text] {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* footer section  */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-primary-orange);
+    color: var(--clr-neutral);
+    /* background-color: #FF6111; */
+    width: 100%;
+    height: 100%;
+}
+
+.footer-container {
+    margin: 0px;
+    max-width: 100%;
+}
+
+.footer-logo {
+    display: block;
+
+}
+
+.footer-logo>img {
+    height: 5%;
+    width: 10%;
+    margin: 35px 20px;
+    float: left;
+
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 35px;
+    float: left;
+}
+
+.footer-col h3 {
+    font-size: 20px;
+    color: var(--clr-neutral);
+    margin: 35px 35px;
+    font-weight: bold;
+
+}
+
+/* Not working -this needs to be checked */
+.footer-col h3:last-child {
+    margin: 0 1px;
+
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    font-size: 18px;
+    color: var(--clr-neutral);
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--clr-neutral);
+
+}
+
+.footer-col ul li a:hover {
+    color: var(--clr-primary-green);
+
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: var(--clr-neutral);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    color: var(--clr-primary-orange);
+}
+
+.footer-col .social-links a:hover {
+    color: var(--clr-primary-green);
+    background-color: var(--clr-neutral);
+}
+
+.footer-brand {
+    max-width: 100%;
+    padding: 10px 10px;
+    background-color: var(--clr-light);
+}
+
+.footer-brand>div {
+    display: inline-block;
+    margin: 10px 30px;
+    padding: 12px;
+
+}
+
+/* style for partner icons in the footer */
+.grayscale {
+    filter: grayscale(1000);
+}
+
+.footer-bottom {
+    padding: 30px 30px;
+    background-color: var(--clr-dark);
+    display: flex;
+    position: relative;
+
+}
+
+.footer-backtotop {
+    display: flex;
+    float: right;
+
+}
+
+.footer-p {
+    font-size: 14px;
+    font-variant: small-caps;
+    margin: auto;
+}
+
+/* footer end */
+/* About us section */
+.about {
+    display: flex;
+    position: relative;
+    margin: 12px 12px;
+
+}
+
+.about-text {
+    min-width: 45%;
+    margin: 12px 15px;
+}
+
+.about-img {
+    min-width: 45%;
+    margin: 12px 12px;
+}
+
+.about-img img {
+    width: 100%;
+
+    /* keep the img fixed in size */
+}
+
+/* end of about section */
+
+/* contact section  */
+
+.contact {
+    display: flex;
+    max-width: 100%;
+    margin: 20px 30px;
+}
+
+.right-section {
+    display: inline;
+    justify-content: left;
+    width: 25%;
+    margin: 12px 20px;
+
+
+}
+
+.left-section {
+    display: inline;
+    width: 75%;
+}
+
+.contact-form {
+    min-width: 100%;
+    margin: 0 auto;
+}
+
+/*responsive*/
+/* media queries for mobile */
+
+@media(max-width: 564px) {
+
+    body {
+        max-width: 564px;
+    }
+
+    .navbar {
+        align-items: center;
+
+    }
+
+    .logo {
+        max-width: 15px;
+    }
+
+    .main-container {
+        width: 100%;
+    }
+
+    .grid-container {
+        grid-template-columns: 100%;
+        grid-auto-rows: auto;
+        margin: 20px 20px;
+    }
+
+    p {
+        margin: 12px 12px;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .user-icon,
+    .shopping-bag,
+    .search-icon {
+        margin-right: 15px;
+    }
+
+    nav.hamburger ul {
+        padding: 10px 0;
+        width: 280px;
+        height: 220px;
+
+    }
+
+    .main-cta {
+        padding: 1px 5px;
+        left: 50%;
+        top: 30%;
+        margin: 1px 5px;
+    }
+
+    .brand-flex {
+        object-fit: cover;
+
+    }
+
+    .title {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .white-text {
+        font-size: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .contact {
+        width: 100%;
+
+    }
+
+    .right-section {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .contact {
+        flex-direction: column;
+        min-width: 100%;
+
+    }
+
+    footer {
+        flex-direction: column;
+
+    }
+
+    .footer-col {
+        width: 100%;
+    }
+
+    /* about section */
+    .about {
+        flex-direction: column;
+        width: 100%;
+
+    }
+}
+
+/* media query for tab */
+/* Portrait and Landscape */
+@media (max-width: 1350px)and (min-width: 635px) {
+
+    .main-cta {
+        padding: 1px 10px;
+        left: 50%;
+        top: 15%;
+        margin: 1px 10px;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+
+    .white-text {
+        font-size: 16px;
+    }
+
+    nav.hamburger ul {
+        width: 700px;
+        height: 250px;
+    }
+
+    .grid-container {
+        grid-template-columns: 47% 47%;
+        grid-auto-rows: auto;
+
+    }
+
+    .btn {
+        padding: 10px 12px;
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .form {
+        width: 90%;
+    }
+
+    .p .brand-flex {
+        margin: 10px;
+        padding: 5px;
+
+    }
+
+    .right-col {
+        width: 200%;
+    }
+
+    .left-col img {
+        width: 100%;
+        height: 80%;
+        margin: 10px 10px;
+
+    }
+
+    .left-col {
+        width: 50%;
+    }
+
+    .right-col {
+        width: 50%;
+    }
+
+    .product-img>img {
+        width: 100%;
+        height: 80%;
+    }
+
+    .footer-brand>div {
+        padding: 0px;
+    }
+}
+
+/* end of media query */

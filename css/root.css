@@ -1,0 +1,15 @@
+/* root elements */
+:root {
+    --clr-primary-orange: #FF6111;
+    --clr-primary-blue: #11AFFF;
+    --clr-primary-green: #1EB374;
+    --clr-dark: #000;
+    --clr-light: rgb(80, 80, 80);
+    --clr-neutral: #fff;
+    --clr-light-bgcolor: #fbe8d7c7;
+    --clr-dark-bgcolor: #ff9c5a;
+    --clr-overlay-orange: #3528228f;
+    
+    --ff-main-font: 'Montserrat';
+    --ff-sub-font: 'Avenir';
+}
