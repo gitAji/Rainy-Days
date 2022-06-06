@@ -16,7 +16,7 @@ body {
     overflow-x: hidden;
 }
 
-    
+
 
 h2 {
     font-family: var(--ff-main-font);
@@ -65,10 +65,15 @@ ul {
 /* navbar */
 .navbar {
     display: flex;
-    position: relative;
+    justify-content: space-between;
+   align-items: center;
     max-height: 75px;
     background-color: var(--clr-neutral);
 
+}
+.hamburger {
+    width: auto;
+    padding: 10px;
 }
 
 /* style the logo */
@@ -89,69 +94,91 @@ ul {
 
 /* hamburger menu */
 .menu {
-    display: inline-flex;
-    position: absolute;
-    margin: 10px 10px;
+    display: none;
+ position: absolute;
+    top: 12%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    letter-spacing: 2px;
+    background-color: var(--clr-primary-orange);
+    z-index: 4;
+    transition: 0.5s;
 }
 
 /* heading for main CTA */
 .title {
-    color: var(--clr-neutral);
+    color: var(--clr-dark);
+    font-family: var(--ff-sub-font);
+    font-size: 28px;
+    text-align: center;
+    text-transform:uppercase;
 
 }
 
 /* p text for main cta */
 .white-text {
-    color: var(--clr-neutral);
-    font-family: "Simplifica";
+    color: var(--clr-light-color);
+    font-family: var(--ff-sub-font);
+    font-size: 18px;
+    padding: 5px 5px;
 }
 
 /* checkbox hack this needed to be updated later */
-
+/*
 input#hamburger {
     display: none;
 }
 
-input#hamburger:checked~nav.hamburger {
+ input#hamburger:checked~nav.hamburger {
     display: block;
-}
+} */
 
-nav.hamburger {
+nav.menu {
     display: none;
 }
 
-nav.hamburger ul {
+nav.menu ul {
     list-style-type: none;
-    display: block;
-    position: absolute;
-    margin: 75px 0px;
-    padding: 10px 10px;
-    z-index: 2;
-    background-color: var(--clr-overlay-orange);
-    height: 225px;
-    width: 1000px;
+   
+   
+
 
 }
 
-nav.hamburger li {
+nav.menu li {
     margin-bottom: 0px;
 
 }
 
-nav.hamburger li a {
+nav.menu li a {
     font-family: var(--ff-main-font);
     font-size: 24px;
     text-decoration: none;
-    color: var(--clr-primary-orange);
+    color: var(--clr-dark);
     padding: 12px 12px;
     display: block;
     text-align: center;
 }
 
-nav.hamburger li a:hover {
+nav.menu li a:hover {
     color: var(--clr-neutral);
     background: var(--clr-primary-green);
 }
+.close {
+    position: fixed;
+     top: 12%;
+     right: 10px;
+     z-index:5;
+     padding: 10px 30px;
+     cursor: pointer;
+     transition: background-color 0.3s ease-in-out;
+     color: var(--white-color);
+ }
+    .close:hover {
+        background-color: var(--clr-light-bgcolor);
+    }
 
 /* Note-:idea is from the teacher */
 
@@ -178,13 +205,35 @@ nav.hamburger li a:hover {
 
 .main-cta {
     position: absolute;
-    background-color: var(--clr-overlay-orange);
+    background-color: var(--clr-light-bgcolor);
     padding: 10px 10px;
-    left: 70%;
-    top: 350px;
-    margin: 12px 20px;
-    overflow: hidden;
+    margin: 10px;
+    width: 30%;
+    right: 50px;
+    top: 35%;
+    z-index: 1;
+   
+    border-radius: 10px;
 
+
+
+}
+
+.cta {
+    padding: 12px 5px;
+    background-color: var(--clr-primary-blue);
+    color: var(--clr-neutral);
+    font-family: var(--ff-main-font);
+    font-size: 24px;
+    text-decoration: none;
+    border: none;
+    text-align: center;
+
+}
+
+.cta:hover {
+    background-color: var(--clr-primary-orange);
+    color: var(--clr-neutral);
 }
 
 /* breadcrumb */
@@ -237,6 +286,7 @@ nav.hamburger li a:hover {
     background-color: var(--clr-neutral);
     border-color: var(--clr-primary-green);
     color: var(--clr-primary-green);
+    
 }
 
 .primary-btn:hover {
@@ -262,16 +312,16 @@ nav.hamburger li a:hover {
 /* main CTA section in the index.html */
 .grid-container {
     display: grid;
-    grid-template-columns: 49% 49%;
+    grid-template-columns: 1fr 1fr;
     grid-auto-rows: 100%;
-    grid-gap: 30px 30px;
+    grid-gap: 40px;
     padding: 12px 12px;
     background-color: var(--clr-light-bgcolor);
 
 }
 
 .grid-men {
-    grid-column: auto;
+    grid-column: 100%;
     grid-row: auto;
     align-items: center;
     background-color: var(--clr-overlay-orange);
@@ -302,12 +352,25 @@ nav.hamburger li a:hover {
     margin: 1px 0;
     padding: 1px;
 }
+.cta-btn {
+  
+    font-size: 24px;
+    text-decoration: none;
+    border: none;
+    text-align: center;
+    padding: 12px 20px;
+    margin:0 auto;
+    justify-content: center;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
 
 /* partners & brands */
 .brand-flex {
     display: flex;
-    padding: 20px 20px;
-    background-color: var(--clr-light-bgcolor);
+    padding: 21px 20px;
+    background-color: var(--clr-light);
     margin-block: 50px;
     cursor: pointer;
     object-fit: cover;
@@ -356,32 +419,60 @@ input[type=text] {
 }
 
 /* footer section  */
-footer {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--clr-primary-orange);
-    color: var(--clr-neutral);
-    /* background-color: #FF6111; */
-    width: 100%;
-    height: 100%;
-}
+footer {}
 
 .footer-container {
-    margin: 0px;
-    max-width: 100%;
+    width: 100%;
+
+
 }
 
-.footer-logo {
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+    background-color: var(--clr-light-bgcolor);
+
+}
+
+.footer-about {
+    width: 50%;
+    padding: 2px;
+  
+
+}
+
+.footer-about p {
+    padding: 10px;
+    font-size: 18px;
+
+
+}
+
+.footer-about img {
+    object-fit: cover;
+    width: 30%;
+    height: 100%;
+    padding: 0 20px;
+
+
+
+}
+
+.newsletter {
     display: block;
-
+    width: 40%;
+    padding: 20px;
 }
 
-.footer-logo>img {
-    height: 5%;
-    width: 10%;
-    margin: 35px 20px;
-    float: left;
-
+.footer-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: var(--clr-primary-orange);
 }
 
 .footer-col {
@@ -391,10 +482,11 @@ footer {
 }
 
 .footer-col h3 {
-    font-size: 20px;
+    font-size: 24px;
     color: var(--clr-neutral);
     margin: 35px 35px;
     font-weight: bold;
+   font-variant: uppercase;
 
 }
 
@@ -439,15 +531,16 @@ footer {
 }
 
 .footer-brand {
-    max-width: 100%;
-    padding: 10px 10px;
-    background-color: var(--clr-light);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 10px;
+    background-color: var(--clr-primary-orange);
+    
 }
 
 .footer-brand>div {
-    display: inline-block;
-    margin: 10px 30px;
-    padding: 12px;
+    padding: 10px;
 
 }
 
@@ -457,16 +550,20 @@ footer {
 }
 
 .footer-bottom {
+    display: flex;
+    justify-content: space-between;
     padding: 30px 30px;
     background-color: var(--clr-dark);
+    color: var(--clr-neutral);
     display: flex;
     position: relative;
 
 }
 
 .footer-backtotop {
-    display: flex;
-    float: right;
+   
+    bottom: 0;
+    right: 0;
 
 }
 
@@ -545,7 +642,7 @@ footer {
     }
 
     .logo {
-        max-width: 15px;
+       
     }
 
     .main-container {
@@ -582,10 +679,13 @@ footer {
     }
 
     .main-cta {
-        padding: 1px 5px;
-        left: 50%;
-        top: 30%;
-        margin: 1px 5px;
+        display: none;
+        /* padding: 1px 5px;
+        right: 30%;
+        top: 10%;
+        width: 30%;
+        height: auto;
+        margin: 1px 5px; */
     }
 
     .brand-flex {
@@ -594,10 +694,12 @@ footer {
     }
 
     .title {
-        font-size: 20px;
+        font-size: 18px;
         margin: 0;
         padding: 0;
+     
     }
+   
 
     .white-text {
         font-size: 10px;
@@ -625,8 +727,38 @@ footer {
 
     }
 
-    footer {
+    .footer-top {
         flex-direction: column;
+        width: 100%;
+        padding: 12px;
+        margin: 0;
+
+    }
+    .footer-about {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+    }
+    .newsletter {
+        width: 100%;
+        padding: 12px;
+        margin: 0;
+
+    }
+    .footer-links {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+    }
+    .footer-brand {
+        
+        width: 100%;
+        padding: 12px;
+        margin: 0;
 
     }
 
