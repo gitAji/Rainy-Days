@@ -210,6 +210,8 @@ nav.menu li a:hover {
     display: flex;
     position: relative;
     margin: 10px auto;
+    width: 100%;
+    height: auto;
     z-index: 1;
     /*-1 will not make the btn work */
 }
