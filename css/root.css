@@ -10,6 +10,6 @@
     --clr-dark-bgcolor: #ff9c5a;
     --clr-overlay-orange: #ff783a61;
     
-    --ff-main-font: 'Montserrat';
+    --ff-main-font: 'roboto', sans-serif;
     --ff-sub-font: 'Open Sans';
 }
