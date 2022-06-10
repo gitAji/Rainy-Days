@@ -10,13 +10,20 @@
 
 /* Style the body */
 body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
     font-size: 1.1rem;
     margin: 10px 0 0 0;
     padding: 0;
-    overflow-x: hidden;
+   
 }
 
-
+h1{
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+   text-transform: uppercase;
+   
+}
 
 h2 {
     font-family: var(--ff-main-font);
@@ -78,7 +85,7 @@ ul {
     display: flex;
     justify-content: space-between;
    align-items: center;
-    max-height: 75px;
+    max-height: 70px;
     background-color: var(--clr-neutral);
 
 }
@@ -107,7 +114,7 @@ ul {
 .menu {
     display: none;
  position: absolute;
-    top: 12%;
+    top: 10%;
     left: 0;
     width: 100%;
     height: 100vh;
@@ -209,7 +216,6 @@ nav.menu li a:hover {
 .slides {
     display: flex;
     position: relative;
-    margin: 10px auto;
     width: 100%;
     height: 100vh;
     z-index: 1;
@@ -231,7 +237,7 @@ right: 20%;
 }
 
 .cta {
-    padding: 30px 50px;
+    padding: 20px 50px;
     background-color: var(--clr-primary-green);
     color: var(--clr-neutral);
     font-family: var(--ff-main-font);
@@ -328,8 +334,8 @@ right: 20%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 100%;
-    grid-gap: 50px;
-    padding: 2px 40px;
+    grid-gap: 100px;
+    padding: 20px 40px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 
 }
@@ -338,7 +344,8 @@ right: 20%;
     grid-column: 100%;
     grid-row: auto;
     align-items: center;
-    background-color: var(--clr-overlay-orange);
+    background-color: var(--clr-light-bgcolor);
+    padding: 20px 20px;
 
 }
 
@@ -346,7 +353,8 @@ right: 20%;
     grid-column: 100%;
     grid-row: auto;
     align-items: center;
-    background-color: var(--clr-overlay-orange);
+    background-color: var(--clr-light-bgcolor);
+    padding: 20px 20px;
 }
 
 .grid-img {
@@ -384,8 +392,8 @@ right: 20%;
 .brand-flex {
     display: flex;
     padding: 21px 20px;
-    background-color: var(--clr-light);
-    margin-block: 50px;
+    background-color: var(--clr-neutral);
+    margin-block: 20px;
     cursor: pointer;
     object-fit: cover;
 
@@ -648,21 +656,25 @@ footer {}
 /*responsive*/
 /* media queries for mobile */
 
-@media(max-width: 564px) {
 
-    body {
-        max-width: 564px;
-    }
+@media screen and (max-width: 768px) 
+ {
+body {
+    overflow: hidden;
+  
+}
+    
+.slides {
+    width: 100%;
+    object-fit: cover;
+    height: 90vh;
+    margin: 0 auto;
+}
 
-    .navbar {
-        align-items: center;
 
-    }
-
-    .logo {
-       
-    }
-
+  
+    
+}
     .main-container {
         width: 100%;
     }
@@ -670,7 +682,7 @@ footer {}
     .grid-container {
         grid-template-columns: 100%;
         grid-auto-rows: auto;
-        margin: 20px 20px;
+      
     }
 
     p {
@@ -688,8 +700,21 @@ footer {}
     .search-icon {
         margin-right: 15px;
     }
+    .close{
+        top:15%;
+        right:1%;
+    }
+    .close i{
+        font-size:20px;
+        padding:0px;
+    }
+    .menu {
+      margin:0 auto;
+      left:0;
+      top:15%;
+    }
 
-    nav.hamburger ul {
+    nav.menu ul {
         padding: 10px 0;
         width: 280px;
         height: 220px;
@@ -697,18 +722,18 @@ footer {}
     }
 
     .main-cta {
-        display: none;
-        /* padding: 1px 5px;
-        right: 30%;
-        top: 10%;
-        width: 30%;
-        height: auto;
-        margin: 1px 5px; */
+        display: block;
     }
 
     .brand-flex {
         object-fit: cover;
+        width: 100%;
+        height: 100%;
 
+    }
+    .brand-flex img{
+        width:100%;
+        height:100%;
     }
 
     .title {
@@ -794,77 +819,3 @@ footer {}
 
 /* media query for tab */
 /* Portrait and Landscape */
-@media (max-width: 1350px)and (min-width: 635px) {
-
-    .main-cta {
-        padding: 1px 10px;
-        left: 50%;
-        top: 15%;
-        margin: 1px 10px;
-    }
-
-    .title {
-        font-size: 25px;
-    }
-
-    .white-text {
-        font-size: 16px;
-    }
-
-    nav.hamburger ul {
-        width: 700px;
-        height: 250px;
-    }
-
-    .grid-container {
-        grid-template-columns: 47% 47%;
-        grid-auto-rows: auto;
-
-    }
-
-    .btn {
-        padding: 10px 12px;
-        font-size: 20px;
-        font-weight: 800;
-    }
-
-    .form {
-        width: 90%;
-    }
-
-    .p .brand-flex {
-        margin: 10px;
-        padding: 5px;
-
-    }
-
-    .right-col {
-        width: 200%;
-    }
-
-    .left-col img {
-        width: 100%;
-        height: 80%;
-        margin: 10px 10px;
-
-    }
-
-    .left-col {
-        width: 50%;
-    }
-
-    .right-col {
-        width: 50%;
-    }
-
-    .product-img>img {
-        width: 100%;
-        height: 80%;
-    }
-
-    .footer-brand>div {
-        padding: 0px;
-    }
-}
-
-/* end of media query */

@@ -42,24 +42,25 @@
 /* containers for the checkout part */
 .checkout {
     display: flex;
+    justify-content: center;
     position: relative;
-    flex-wrap: wrap;
-    margin: 10px 10px;
+   padding: 10px;
+   
+
 
 }
 
 .left-container {
-    display: inline-flex;
-    flex-direction: column;
-    width: 70%;
+  
+   padding:10px 20px;
+    width: 65%;
 }
 
 .right-container {
     display: inline-block;
-    width: 20%;
-    padding: 10px 12px,
-        margin: 20px 20px;
-
+    width: 25%;
+    padding: 10px,20px,
+  
 }
 
 .price {

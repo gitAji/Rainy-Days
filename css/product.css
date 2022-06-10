@@ -3,34 +3,39 @@
 
 .main-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 auto;
-    padding: 12px 12px;
+
+
+    
 
 }
 
 /* style for category */
 .category {
-    width: 33%;
-    margin: 0 auto;
-    flex-wrap: wrap;
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+  
+    padding: 20px;
 }
 
 .cat-img {
     width: 100%;
-    overflow: hidden;
-    margin-block: 20px;
+ height: 100%;
+ object-fit: cover;
+
+ box-shadow: 1px 1px 5px var(--clr-light-bgcolor);
+
 
 }
 
-.cat-img>img {
-    height: 480px;
+.cat-img img {
     width: 100%;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    height: 100%;
+
 }
 
 .cat-img>img:hover {
@@ -67,13 +72,7 @@
     transform: scale(1.1);
 }
 
-.product-description {
-    display: flex;
-    padding: 20px;
-   margin: 10px;
-    justify-content: space-between;
-    box-shadow: 0 0 5px #ccc;
-}
+
 
 .container-guest {
     padding: 12px 12px;
@@ -102,21 +101,38 @@
 /* style for product-view page */
 .left-col {
     width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+  
+}
+.left-img{
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
 }
 
-.right-col {
-    width: 50%;
-}
-
-.left-col img {
-    width: 60%;
-    height: 90%;
-    margin: 40px 40px;
+.left-img img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+
 }
+.right-col {
+   
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 .product-description {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+    justify-content: space-between;
+  
 }
 
 /* style for checkout success */
@@ -128,7 +144,7 @@
 }
 
 /* media queries for product and checkout section are placed here*/
-@media(max-width: 564px) {
+@media(max-width: 768px) {
     .cat-img>img {
         height: auto;
     }
@@ -151,6 +167,14 @@
     .left-col {
         width: 100%;
     }
+.left-img{
+    width: 100%;
+    height: 100%;
+}
+.left-img img{
+    width: 100%;
+    height: 100%;
+}
 
     .right-col {
         width: 100%;
