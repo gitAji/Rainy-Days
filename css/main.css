@@ -663,9 +663,6 @@ body {
     overflow: hidden;
   
 }
-.logo img {
-    width:100px;
-}
     
 .slides {
     width: 100%;
@@ -675,9 +672,6 @@ body {
 }
 
 
-  
-    
-}
     .main-container {
         width: 100%;
     }
