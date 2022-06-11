@@ -659,7 +659,10 @@ footer {}
 
 @media screen and (max-width: 768px) 
  {
-
+body {
+    overflow-y: hidden;
+  
+}
     
 .slides {
     width: 100%;
